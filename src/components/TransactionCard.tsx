@@ -42,7 +42,7 @@ function TransactionCard({ transaction }: TransactionCardProps) {
                 <div className='text-sm'>{formatDateWithDay(transaction.endDate)}</div>
             </div>
             <div className='flex flex-col items-center mt-2 shadow-md border-b rounded-bl-lg rounded-br-lg'>
-                <div className={`w-full text-center border-b pb-2 ${transaction.transactionType === "INCOME" ? "text-green-500" : "text-red-500"}  font-bold`}>
+                <div className={`w-full text-center h-14 border-b pb-2 ${transaction.transactionType === "INCOME" ? "text-green-500" : "text-red-500"}  font-bold`}>
                     <div>{transaction.title}</div>
                     <div className='text-sm font-light'>{transaction.description}</div>
                 </div>

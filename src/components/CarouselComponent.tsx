@@ -45,7 +45,7 @@ function CarouselComponent({ transactions }: CarouselComponentProps) {
                 <CarouselContent className='px-10'>
                     {
                         transactions.map((transaction,index) => {
-                            return <CarouselItem key={index} className="lg:basis-1/3 basis-full p-0 ">
+                            return <CarouselItem key={index} className="lg:basis-1/3 basis-full p-2">
                                 <TransactionCard transaction={transaction}/>
                             </CarouselItem>
                         })
