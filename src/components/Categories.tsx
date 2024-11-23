@@ -4,7 +4,6 @@ import { useCategory } from '@/hooks/useCategory';
 import { Button } from './ui/button';
 import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation';
-import TransactionByAmount from './TransactionByAmount';
 
 function Categories() {
   const { categories, loading, error, loadCategory } = useCategory();
