@@ -7,12 +7,14 @@ interface TransactionUpdateProps {
   };
 }
 
-async function TransactionUpdate({params}:TransactionUpdateProps) {
+export default async function TransactionUpdate({
+  params,
+}: {
+  params: Promise<{ id:any }>
+})  {
   const { id } = await params;
   const numericId = parseInt(id, 10);
   return (
     <TransactionUpdatePage id={numericId}/>
   )
 }
-
-export default TransactionUpdate

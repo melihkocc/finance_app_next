@@ -7,7 +7,11 @@ interface CategoryUpdateProps {
   };
 }
 
-async function CategoryUpdate({params}:CategoryUpdateProps) {
+export default async function CategoryUpdate({
+  params,
+}: {
+  params: Promise<{ id:any }>
+})  {
   const { id } = await params;
   const numericId = parseInt(id, 10);
   return (
@@ -15,4 +19,3 @@ async function CategoryUpdate({params}:CategoryUpdateProps) {
   )
 }
 
-export default CategoryUpdate
