@@ -1,16 +1,14 @@
-import Categories from '@/components/Categories'
-import Container from '@/components/Container'
-import DashboardTab from '@/components/DashboardTab'
-import TransactionByAmount from '@/components/TransactionByAmount'
-import React from 'react'
+// app/dashboard/page.tsx (Server Component)
+import dynamic from 'next/dynamic';
 
-function Dashboard() {
+const Categories = dynamic(() => import('@/components/Categories'), { ssr: false });
+const TransactionByAmount = dynamic(() => import('@/components/TransactionByAmount'), { ssr: false });
+
+export default function Dashboard() {
   return (
-    <Container>
-      <Categories/>
-      <TransactionByAmount/>
-    </Container>
-  )
+    <div>
+      <Categories />
+      <TransactionByAmount />
+    </div>
+  );
 }
-
-export default Dashboard
