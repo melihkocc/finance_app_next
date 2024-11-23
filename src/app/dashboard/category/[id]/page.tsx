@@ -10,4 +10,3 @@ export default async function TransactionByCategory({
   const numericId = parseInt(id, 10);
   return <TransactionByCategoryPage id={numericId} />;
 }
-
