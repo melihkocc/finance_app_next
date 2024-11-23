@@ -13,6 +13,7 @@ export const useAuth = () => {
     setError(null);
     try {
       const data = await loginUser({ username, password });
+      console.log(data)
       setCookie("token", data.payload.accessToken)
       setCookie("refreshToken",data.payload.refreshToken)
       setCookie("id",data.payload.id)

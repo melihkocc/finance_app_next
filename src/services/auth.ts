@@ -1,4 +1,4 @@
-const API_URL = process.env.API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const loginUser = async (userData: { username: string; password: string }) => {
     const response = await fetch(`${API_URL}/authenticate`, {
