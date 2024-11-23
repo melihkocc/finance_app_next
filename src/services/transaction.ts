@@ -83,9 +83,5 @@ export const fetchTransactionsByAmountRange = async (
         });
     }
 
-    console.log("Service minamount",minAmount)
-    console.log("Service maxAmount",maxAmount)
-
-    console.log("serviceData",data)
     return data
 };
