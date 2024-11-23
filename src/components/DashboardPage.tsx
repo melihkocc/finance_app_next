@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import Categories from '@/components/Categories'
 import Container from '@/components/Container'
