@@ -1,12 +1,6 @@
 import CategoryUpdatePage from '@/components/CategoryUpdatePage';
 import React from 'react'
 
-interface CategoryUpdateProps {
-  params: {
-      id: string;
-  };
-}
-
 export default async function CategoryUpdate({
   params,
 }: {
