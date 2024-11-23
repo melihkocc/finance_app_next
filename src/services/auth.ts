@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = process.env.API_URL;
 
 export const loginUser = async (userData: { username: string; password: string }) => {
     const response = await fetch(`${API_URL}/authenticate`, {
@@ -7,8 +7,11 @@ export const loginUser = async (userData: { username: string; password: string }
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(userData),
+      
     });
   
+    console.log(response)
+
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(errorData.exception.message || 'Giriş işlemi başarısız.');

@@ -67,7 +67,6 @@ function CategoryForm({ category, onSuccess }: CategoryFormProps) {
     };
 
 
-    console.log("error", error)
 
     return (
         <div className='flex justify-center items-center'>

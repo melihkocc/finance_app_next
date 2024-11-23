@@ -26,7 +26,6 @@ function DashboardTab({dtoTransactions}:DashboardTabProps) {
   }, [dtoTransactions]);
 
   useEffect(() => {
-    console.log("dtoTransactions updated:", dtoTransactions);
 
     setIncomes(dtoTransactions.filter((transaction) => transaction.transactionType === "INCOME"));
     setExpense(dtoTransactions.filter((transaction) => transaction.transactionType === "EXPENSE"));

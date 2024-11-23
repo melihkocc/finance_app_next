@@ -1,7 +1,7 @@
 import { deleteCookie, getCookie } from 'cookies-next';
 import { useRouter } from 'next/router';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = process.env.API_URL;
 
 export const apiRequest = async (endpoint: string, options:any = {}) => {
   const token = getCookie('token');
