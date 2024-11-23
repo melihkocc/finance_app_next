@@ -1,19 +1,16 @@
 import TransactionByCategoryPage from '@/components/TransactionByCategoryPage';
-import React from 'react'
+import React from 'react';
 
 interface TransactionByCategoryProps {
   params: {
-      id: string;
+    id: string;
   };
 }
 
-
-async function TransactionByCategory({params} : TransactionByCategoryProps) {
-  const { id } = await params;
+async function TransactionByCategory({ params }: TransactionByCategoryProps) {
+  const { id } = params;
   const numericId = parseInt(id, 10);
-  return (
-    <TransactionByCategoryPage id={numericId}/>
-  )
+  return <TransactionByCategoryPage id={numericId} />;
 }
 
-export default TransactionByCategory
+export default TransactionByCategory;
