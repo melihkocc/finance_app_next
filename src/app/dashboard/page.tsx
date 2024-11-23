@@ -1,14 +1,18 @@
-// app/dashboard/page.tsx (Server Component)
-import dynamic from 'next/dynamic';
+import Categories from '@/components/Categories'
+import Container from '@/components/Container'
+import TransactionByAmount from '@/components/TransactionByAmount'
+import React from 'react'
+import { Suspense } from 'react';
 
-const Categories = dynamic(() => import('@/components/Categories'), { ssr: false });
-const TransactionByAmount = dynamic(() => import('@/components/TransactionByAmount'), { ssr: false });
-
-export default function Dashboard() {
+function Dashboard() {
   return (
-    <div>
-      <Categories />
-      <TransactionByAmount />
-    </div>
-  );
+    <Container>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Categories />
+        <TransactionByAmount />
+      </Suspense>
+    </Container>
+  )
 }
+
+export default Dashboard
