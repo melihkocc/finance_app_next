@@ -4,6 +4,7 @@ import { useCategory } from '@/hooks/useCategory';
 import { Button } from './ui/button';
 import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react'
 
 function Categories() {
   const { categories, loading, error, loadCategory } = useCategory();
@@ -52,7 +53,7 @@ function Categories() {
   }
 
   return (
-    <>
+    <Suspense>
       {
         showSuccess && (
           <div className='flex justify-center items-center'>
@@ -102,7 +103,7 @@ function Categories() {
             <div>Henüz Kategori Eklemediniz</div>
         }
       </div>
-    </>
+    </Suspense>
   );
 }
 
