@@ -47,8 +47,8 @@ const TransactionByAmount = () => {
       }
       // Filter işlemi
       getTransactionsByAmountRange(minAmount, maxAmount);
-    } catch (err) {
-      console.error("Error filtering transactions:", err);
+    } catch (err:any) {
+      throw err.message
     }
   };
 
