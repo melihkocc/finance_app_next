@@ -92,7 +92,6 @@ function TransactionForm({ transaction, onSuccess }: TransactionFormProps) {
   
   
     if (transaction?.id) {
-      console.log("edited data",formattedData)
       const response = await editTransaction(transaction.id, formattedData);
         if(response.status===200){
         router.push("/dashboard?edited=true");
